@@ -26,7 +26,7 @@ public class PlayerBase : MonoBehaviour
     void Update()
     {
         frameCount += 1;
-        if (frameCount % 3 == 0)
+        if (frameCount % 15 == 0)
         {
             if (anxietyLevel < maxAnxiety)
             {

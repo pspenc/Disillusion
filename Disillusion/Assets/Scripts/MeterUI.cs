@@ -12,8 +12,9 @@ public class MeterUI : MonoBehaviour
 
     public void UpdateMeter(int anxietyLevel) //anxietyLevel = 0
     {
-        int value = (564 - (anxietyLevel * 3));
-        meterMask.SetRight(value);
+        int value = (anxietyLevel * 3);
+        meterMask.sizeDelta = new Vector2(value, 76);
+        //meterMask.SetRight(value);
     }
 
     // Start is called before the first frame update
