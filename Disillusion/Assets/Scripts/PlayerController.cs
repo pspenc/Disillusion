@@ -123,7 +123,7 @@ public class PlayerController : MonoBehaviour
         m_Controller.enableOverlapRecovery = true;
 
     }
-
+    public bool EnableMovement = true;
     private int CurrentStepSFXIndex = 0;
     private float DistanceSinceLastSFX = 0;
     void CalcAndPlayFootsteps()
@@ -143,11 +143,8 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-
-
-
-        HandleCharacterMovement();
+        if (EnableMovement)
+            HandleCharacterMovement();
     }
 
 

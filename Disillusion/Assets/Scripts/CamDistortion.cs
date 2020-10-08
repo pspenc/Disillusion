@@ -10,8 +10,8 @@ public class CamDistortion : MonoBehaviour
     bool flipTime = false;
     LensDistortion distort;
     private int frameCount;
-    public int anxietyLevel = 0;
-    public int maxAnxiety = 100;
+//    public int anxietyLevel = 0;
+//    public int maxAnxiety = 100;
     // Start is called before the first frame update
     void Start()
     {

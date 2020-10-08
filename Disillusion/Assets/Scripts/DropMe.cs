@@ -52,8 +52,9 @@ public class DropMe : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPointe
         var image = m_DraggingIcons.AddComponent<Image>();
         var group = m_DraggingIcons.AddComponent<CanvasGroup>();
         group.blocksRaycasts = false;
-        image.sprite = GetComponent<Image>().overrideSprite;
+        image.sprite = receivingImage.overrideSprite;
 
+        receivingImage.color = new Color(0, 0, 0, receivingImage.color.a);
         receivingImage.overrideSprite = null;
         image.SetNativeSize();
         image.rectTransform.localScale = new Vector3(0.3f, 0.3f, 1);
@@ -142,5 +143,6 @@ public class DropMe : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPointe
     public void UpdatePic()
     {
         receivingImage.overrideSprite = m_Controller.AllSprite[CurrentIndex];
+        receivingImage.color = new Color(1, 1, 1, receivingImage.color.a);
     }
 }

@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.Assertions;
 using UnityEngine.UI;
 using DG.Tweening;
+using System.Linq.Expressions;
 //using System.ran
 
 public class PuzzleController : MonoBehaviour
@@ -37,7 +38,7 @@ public class PuzzleController : MonoBehaviour
     {
         Cursor.lockState = CursorLockMode.Confined;
         Cursor.visible = true;
-
+        PlayerBase.Instance.GetComponent<PlayerController>().EnableMovement = false;
         var ImageArray = GetComponentsInChildren<Image>();
         //foreach (var m_Image in ImageArray) print(m_Image.gameObject.name);
         foreach (var m_Image in ImageArray)
@@ -45,11 +46,11 @@ public class PuzzleController : MonoBehaviour
                 m_Image.color = new Color(m_Image.color.r, m_Image.color.g, m_Image.color.b, 0);
         GetComponent<Image>().material.DOFloat(5, "_BlurSize", 1);
         yield return new WaitForSeconds(0.5f);
-        GetComponent<Image>().material.DOColor(Color.black, "_Color", 1f);
+        //GetComponent<Image>().material.DOColor(Color.black, "_Color", 1f);
         yield return new WaitForSeconds(1f);
         foreach (var m_Image in ImageArray)
             if (m_Image.gameObject != gameObject)
-                m_Image.DOFade(1, 1);
+                m_Image.DOFade(0.5f, 1);
 
         ShuffleCurrentIndex();
         yield return null;
@@ -72,6 +73,7 @@ public class PuzzleController : MonoBehaviour
     IEnumerator Win()
     {
         HasEnd = true;
+        PlayerBase.Instance.GetComponent<PlayerController>().EnableMovement = true;
         PlayerBase.Instance.ChangeAnxiety(-1000);
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
