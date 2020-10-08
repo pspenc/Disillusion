@@ -24,13 +24,15 @@ public class DropMe : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPointe
     private void Awake()
     {
         containerImage = GetComponent<Image>();
-        receivingImage = GetComponentInChildren<Image>();
+        receivingImage = transform.Find("DropImage").GetComponent<Image>();
         m_Controller = GetComponentInParent<PuzzleController>();
     }
 
     private void Start()
     {
-        receivingImage.color = Color.white;
+        //print("Container Name " + containerImage.name);
+        //print("receiving Name " + receivingImage.name);
+        //receivingImage.color = Color.white;
         receivingImage.sprite = null;
 
     }
@@ -139,6 +141,6 @@ public class DropMe : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPointe
 
     public void UpdatePic()
     {
-        containerImage.overrideSprite = m_Controller.AllSprite[CurrentIndex];
+        receivingImage.overrideSprite = m_Controller.AllSprite[CurrentIndex];
     }
 }
