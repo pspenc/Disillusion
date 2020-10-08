@@ -72,6 +72,7 @@ public class PuzzleController : MonoBehaviour
     IEnumerator Win()
     {
         HasEnd = true;
+        PlayerBase.Instance.ChangeAnxiety(-1000);
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
         var ImageArray = GetComponentsInChildren<Image>();

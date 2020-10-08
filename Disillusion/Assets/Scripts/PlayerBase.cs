@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerBase : MonoBehaviour
+public class PlayerBase : SingletonBase<PlayerBase>
 {
 
     public int anxietyLevel;
@@ -21,10 +21,16 @@ public class PlayerBase : MonoBehaviour
         meterUI.UpdateMeter(anxietyLevel);
 
     }
-
+    public void ChangeAnxiety(int delta)
+    {
+        anxietyLevel += delta;
+        anxietyLevel = Mathf.Clamp(anxietyLevel, 0, maxAnxiety);
+    }
     // Update is called once per frame
     void Update()
     {
+        meterUI.UpdateMeter(anxietyLevel);
+        /*
         frameCount += 1;
         if (frameCount % 15 == 0)
         {
@@ -39,7 +45,8 @@ public class PlayerBase : MonoBehaviour
                 meterUI.UpdateMeter(anxietyLevel);
             }
         }
+        */
 
-        
+
     }
 }
