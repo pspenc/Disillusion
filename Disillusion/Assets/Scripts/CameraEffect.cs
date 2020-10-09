@@ -44,7 +44,8 @@ public class CameraEffect : MonoBehaviour
             _Material.SetFloat("_NoiseTimeScale", noiseTimeScale);
             _Material.SetTexture("_NoiseTex", noiseTexure);
             _Material.SetTexture("_OverlayTex", OverlayTexture);
-            _Material.SetFloat("_OverlayAlpha", 0.99f);
+            float overAlpha = (float)PlayerBase.Instance.anxietyLevel / PlayerBase.Instance.maxAnxiety;
+            _Material.SetFloat("_OverlayAlpha", 1 - overAlpha * 0.0025f);
             Graphics.Blit(sourceTexture, destTexture, _Material);
         }
         else

@@ -31,7 +31,10 @@ Shader "Unlit/WaveWarp"
 				float4 noise = tex2D(_NoiseTex, i.uv - _Time.xy * _NoiseTimeScale);
 				float2 offset = noise.xy * _UVScale;
 				float4 MainColor = tex2D(_MainTex, i.uv);
-				return MainColor * _OverlayAlpha + tex2D(_OverlayTex, i.uv + offset) * (1 - _OverlayAlpha);
+				//float4 tmp = (MainColor * _OverlayAlpha);
+				//float4 tmp2 = (tex2D(_OverlayTex, i.uv + offset) * (1.0 - _OverlayAlpha));
+				//return tmp + tmp2.rgba;
+				return ( (MainColor * _OverlayAlpha) + (tex2D(_OverlayTex, i.uv + offset) * (1.0 - _OverlayAlpha)));
 			}
 			ENDCG
 		}
