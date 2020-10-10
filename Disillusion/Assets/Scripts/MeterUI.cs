@@ -10,9 +10,9 @@ public class MeterUI : MonoBehaviour
 
     public RectTransform meterMask;
 
-    public void UpdateMeter(int anxietyLevel) //anxietyLevel = 0
+    public void UpdateMeter(float anxietyLevel) //anxietyLevel = 0
     {
-        int value = (anxietyLevel * 3);
+        float value = (anxietyLevel * 3);
         meterMask.sizeDelta = new Vector2(value, 76);
         //meterMask.SetRight(value);
     }
