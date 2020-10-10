@@ -47,22 +47,6 @@ public class PlayerBase : SingletonBase<PlayerBase>
 
 
         meterUI.UpdateMeter(anxietyLevel);
-        /*
-        frameCount += 1;
-        if (frameCount % 15 == 0)
-        {
-            if (anxietyLevel < maxAnxiety)
-            {
-                anxietyLevel += 1;
-                meterUI.UpdateMeter(anxietyLevel);
-            }
-            else
-            {
-                anxietyLevel = 0;
-                meterUI.UpdateMeter(anxietyLevel);
-            }
-        }
-        */
 
 
     }

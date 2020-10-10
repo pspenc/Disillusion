@@ -134,7 +134,7 @@ public class PlayerController : MonoBehaviour
         {
             audioSource.clip = footstepSFX[CurrentStepSFXIndex];
             if (!audioSource.isPlaying) audioSource.Play();
-            PlayerBase.Instance.ChangeAnxiety(5);
+            PlayerBase.Instance.ChangeAnxiety(2); //5
             CurrentStepSFXIndex = (CurrentStepSFXIndex + 1) % footstepSFX.Length;
             DistanceSinceLastSFX = 0;
         }
