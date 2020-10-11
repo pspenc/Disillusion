@@ -70,6 +70,7 @@
      <Compile Include="Assets\Scripts\PlayerInputHandler.cs" />
      <Compile Include="Assets\Scripts\PuzzleCollider.cs" />
      <Compile Include="Assets\Scripts\PuzzleController.cs" />
+     <Compile Include="Assets\Scripts\TitleHandler.cs" />
      <Compile Include="Assets\Scripts\UIExtensions.cs" />
      <Compile Include="Assets\Scripts\centralRotateOverTime.cs" />
      <None Include="Assets\Shader\UIBlur.shader" />
