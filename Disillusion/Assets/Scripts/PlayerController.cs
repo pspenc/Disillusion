@@ -63,7 +63,7 @@ public class PlayerController : MonoBehaviour
 
     [Header("Audio")]
     [Tooltip("how long is the distance player move there will be a step sound ")]
-    public float DistanceToPlaystepSFX = 1f;
+    public float DistanceToPlaystepSFX = .2f;
 
     //[Tooltip("Amount of footstep sounds played when moving one meter while sprinting")]
     //public float footstepSFXFrequencyWhileSprinting = 1f;
@@ -133,8 +133,8 @@ public class PlayerController : MonoBehaviour
         if (DistanceSinceLastSFX > DistanceToPlaystepSFX)
         {
             audioSource.clip = footstepSFX[CurrentStepSFXIndex];
-            if (!audioSource.isPlaying) audioSource.Play();
-            PlayerBase.Instance.ChangeAnxiety(2); //5
+            /*if (!audioSource.isPlaying)*/ audioSource.Play();
+            PlayerBase.Instance.ChangeAnxiety(4); //5
             CurrentStepSFXIndex = (CurrentStepSFXIndex + 1) % footstepSFX.Length;
             DistanceSinceLastSFX = 0;
         }
