@@ -11,7 +11,7 @@ public class BreathingButton : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
 
@@ -25,8 +25,8 @@ public class BreathingButton : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-       if(Input.GetKey(KeyCode.B))
+
+        if (Input.GetKey(KeyCode.B))
         {
             PlayerBase.Instance.ChangeAnxiety(-.03f);
             GetComponent<UnityEngine.UI.Image>().color = Color.black;
@@ -34,7 +34,8 @@ public class BreathingButton : MonoBehaviour
         }
         else
         {
-            GetComponent<UnityEngine.UI.Image>().color = Color.white;
+            if (GetComponent<UnityEngine.UI.Image>())
+                GetComponent<UnityEngine.UI.Image>().color = Color.white;
             //GetComponent<Image>().tintColor = Color.white;
         }
     }

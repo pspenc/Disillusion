@@ -6,6 +6,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Video;
 using UnityEngine.SceneManagement;
+using DG.Tweening;
 
 public class TitleHandler : MonoBehaviour
 {
@@ -29,8 +30,9 @@ public class TitleHandler : MonoBehaviour
         titlePhase = 0;
         buttonAlpha = 0f;
         image = button.GetComponent<Image>();
+        //button.transform.localScale = Vector3.zero;
         buttonMask.gameObject.SetActive(false);
-        button.gameObject.SetActive(false);
+        //button.gameObject.SetActive(false);
         videoPlayer.Play();
 
         maskTransform = buttonMask.GetComponent<RectTransform>();
@@ -60,9 +62,10 @@ public class TitleHandler : MonoBehaviour
         titlePhase = newPhase;
     }
 
-    // Update opacity and active status of button
     void UpdateButton()
     {
+
+
         if (titlePhase == 1)
         {
             buttonMask.gameObject.SetActive(true);
@@ -78,6 +81,7 @@ public class TitleHandler : MonoBehaviour
                 button.interactable = true;
             }
         }
+        /*
         else if (titlePhase == 2)
         {
             if (image.color.a < 0.1f)
@@ -85,6 +89,7 @@ public class TitleHandler : MonoBehaviour
                 button.gameObject.SetActive(false);
             }
         }
+        */
     }
 
     //Update transition to next scene
@@ -118,6 +123,7 @@ public class TitleHandler : MonoBehaviour
     //input process for start button
     public void StartInput()
     {
+        button.interactable = false;
         titlePhase = 2;
         videoPlayer.clip = transitionVideo;
         videoPlayer.Play();
