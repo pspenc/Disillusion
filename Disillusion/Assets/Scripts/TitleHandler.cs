@@ -81,7 +81,7 @@ public class TitleHandler : MonoBehaviour
                 button.interactable = true;
             }
         }
-        /*
+        
         else if (titlePhase == 2)
         {
             if (image.color.a < 0.1f)
@@ -89,7 +89,7 @@ public class TitleHandler : MonoBehaviour
                 button.gameObject.SetActive(false);
             }
         }
-        */
+        
     }
 
     //Update transition to next scene
