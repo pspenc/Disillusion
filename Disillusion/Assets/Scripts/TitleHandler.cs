@@ -6,6 +6,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Video;
 using UnityEngine.SceneManagement;
+using UnityEngine.Audio;
 using DG.Tweening;
 
 public class TitleHandler : MonoBehaviour
@@ -19,6 +20,8 @@ public class TitleHandler : MonoBehaviour
     public Image buttonMask;
     public VideoClip transitionVideo;
     public int titlePhase;
+    public AudioSource audioSource;
+    public AudioClip clip2;
 
     private float buttonAlpha; //doesn't realy work, fading in images a headache
     private Image image;
@@ -56,6 +59,8 @@ public class TitleHandler : MonoBehaviour
                 if (isVideoDone(videoPlayer.time))
                 {
                     newPhase = 1;
+                    audioSource.clip = clip2;
+                    audioSource.Play();
                 }
                 break;
         }
@@ -128,4 +133,5 @@ public class TitleHandler : MonoBehaviour
         videoPlayer.clip = transitionVideo;
         videoPlayer.Play();
     }
+
 }
