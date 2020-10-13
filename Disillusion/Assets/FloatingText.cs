@@ -10,12 +10,12 @@ public class FloatingText : MonoBehaviour
 
     public float thresholdForAppearing = 50;
     public float howLongToAppearFor = 1;
-    TextMesh text;
+    //TextMesh text;
 
     void Start()
     {
-        text = GetComponent<TextMesh>();
-        text.color = Color.black;
+        //text = GetComponent<TextMesh>();
+        //text.color = Color.black;
         gameObject.GetComponent<Renderer>().enabled = false;
     }
 
@@ -26,11 +26,11 @@ public class FloatingText : MonoBehaviour
         if(PlayerBase.Instance.anxietyLevel > thresholdForAppearing)
         {
             gameObject.GetComponent<Renderer>().enabled = true;
-            text.color = Color.white;
+            //text.color = Color.white;
         }
         else
         {
-            text.color = Color.black;
+            //text.color = Color.black;
             gameObject.GetComponent<Renderer>().enabled = false;
         }
 

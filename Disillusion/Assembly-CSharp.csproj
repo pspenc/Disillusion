@@ -57,6 +57,7 @@
   <ItemGroup>
      <Compile Include="Assets\BreathingButton.cs" />
      <Compile Include="Assets\ButtonScript.cs" />
+     <Compile Include="Assets\Floater.cs" />
      <Compile Include="Assets\FloatingText.cs" />
      <Compile Include="Assets\Scripts\CamDistortion.cs" />
      <Compile Include="Assets\Scripts\CameraEffect.cs" />
