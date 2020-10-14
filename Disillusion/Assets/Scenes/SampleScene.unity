@@ -1179,6 +1179,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 9.661, z: 0}
+--- !u!1 &622088628 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7476331009007382028, guid: afd1631cd70d77f46bbcca36c2b61eff,
+    type: 3}
+  m_PrefabInstance: {fileID: 1939427891197038113}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &622088630
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 622088628}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c5cccd515b717e4f94da2083df50cba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &673868489
 GameObject:
   m_ObjectHideFlags: 0
@@ -5406,6 +5424,18 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1939427891197038113}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2134329314
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2134329313}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c5cccd515b717e4f94da2083df50cba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &2134329317
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5704,6 +5734,11 @@ PrefabInstance:
       propertyPath: m_ScaleInLightmap
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 2138069594408108710, guid: afd1631cd70d77f46bbcca36c2b61eff,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f2742ded08b8ec04d9674eee9e1775f0, type: 2}
     - target: {fileID: 2196357670034726314, guid: afd1631cd70d77f46bbcca36c2b61eff,
         type: 3}
       propertyPath: m_IsActive
@@ -5839,6 +5874,11 @@ PrefabInstance:
       propertyPath: m_ScaleInLightmap
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 3829433909362512387, guid: afd1631cd70d77f46bbcca36c2b61eff,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e0ed47360a04fc24297cd5b8a1faadb2, type: 2}
     - target: {fileID: 3846798621535110913, guid: afd1631cd70d77f46bbcca36c2b61eff,
         type: 3}
       propertyPath: m_StaticEditorFlags
